@@ -1,11 +1,12 @@
-[gd_scene load_steps=7 format=3 uid="uid://ctx2l814q0fvm"]
+[gd_scene load_steps=8 format=3 uid="uid://ctx2l814q0fvm"]
 
-[ext_resource type="PackedScene" path="res://tilemaps/background.tscn" id="1_o4n4d"]
-[ext_resource type="PackedScene" path="res://tilemaps/grounds and platforms.tscn" id="2_2qbct"]
+[ext_resource type="PackedScene" uid="uid://2tlnjjmk4no7" path="res://tilemaps/background.tscn" id="1_o4n4d"]
+[ext_resource type="PackedScene" uid="uid://bwchkvxyfnu8l" path="res://tilemaps/grounds and platforms.tscn" id="2_2qbct"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_k2uem"]
-[ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="5_odvgd"]
+[ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="5_odvgd"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="5_pqx1i"]
-[ext_resource type="PackedScene" uid="uid://de6u7wjm56fn5" path="res://entities/interactables/spikes.tscn" id="6_7lav8"]
+[ext_resource type="PackedScene" path="res://entities/interactables/spikes.tscn" id="6_7lav8"]
+[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="7_pdn2j"]
 
 [node name="Level2" type="Node2D"]
 
@@ -101,3 +102,5 @@ position = Vector2(368, 2512)
 
 [node name="Node2D25" parent="." instance=ExtResource("6_7lav8")]
 position = Vector2(400, 2512)
+
+[node name="Ambient Cave Music" parent="." instance=ExtResource("7_pdn2j")]
