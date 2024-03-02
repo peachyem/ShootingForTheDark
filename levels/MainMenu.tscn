@@ -22,5 +22,11 @@ text = "Play"
 
 [node name="Transition" parent="." instance=ExtResource("3_4u4bg")]
 
+[node name="ColorRect" parent="Transition" index="0"]
+visible = false
+metadata/_edit_use_anchors_ = true
+
 [connection signal="pressed" from="Camera2D/Play" to="." method="_on_play_pressed"]
 [connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
+
+[editable path="Transition"]
