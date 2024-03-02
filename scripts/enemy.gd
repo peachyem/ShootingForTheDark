@@ -6,7 +6,7 @@ var player = null
 
 func _physics_process(delta):
 	if player_chase:
-		position += (player.position - position)/speed
+		position.x += (player.position.x - position.x)/speed
 		
 
 func _on_detection_area_body_entered(body):

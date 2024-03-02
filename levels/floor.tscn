@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://c5ngmeihkn4oh"]
+[gd_scene load_steps=6 format=3 uid="uid://c5ngmeihkn4oh"]
 
 [ext_resource type="TileSet" uid="uid://ddbiuacnrr2wy" path="res://tilemaps/glass.tres" id="1_5ac1f"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="2_qm3ec"]
 [ext_resource type="Script" path="res://scripts/player_control.gd" id="3_e8i3u"]
 [ext_resource type="PackedScene" uid="uid://ddh0i6mt878tx" path="res://entities/enemies/enemy.tscn" id="4_n7hp7"]
+[ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="5_d3up1"]
 
 [node name="Floor" type="Node2D"]
 
@@ -18,3 +19,6 @@ position = Vector2(379, 242)
 [node name="Player" parent="." instance=ExtResource("2_qm3ec")]
 position = Vector2(63, 227)
 script = ExtResource("3_e8i3u")
+
+[node name="RigidBody2D" parent="." instance=ExtResource("5_d3up1")]
+position = Vector2(-124, 251)

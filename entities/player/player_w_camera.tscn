@@ -3,18 +3,19 @@
 [ext_resource type="Texture2D" uid="uid://ci5pdr2idycm6" path="res://images/Jomb.png" id="1_ew0fa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i4eq"]
-size = Vector2(24, 41.5)
+size = Vector2(38, 43)
 
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 3
+collision_mask = 7
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-30, 86.75)
-shape = SubResource("RectangleShape2D_8i4eq")
-
-[node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-position = Vector2(1, -10.75)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(22, 32)
 scale = Vector2(2.125, 2)
 texture = ExtResource("1_ew0fa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(19, 44.5)
+shape = SubResource("RectangleShape2D_8i4eq")

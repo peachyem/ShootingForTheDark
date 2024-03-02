@@ -1,9 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://c7aqf403j0esb"]
+[gd_scene load_steps=5 format=3 uid="uid://b3rthjb2ebsk7"]
 
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="2_jusea"]
 [ext_resource type="Script" path="res://scripts/player_control.gd" id="3_ln4g7"]
-[ext_resource type="PackedScene" uid="uid://bwchkvxyfnu8l" path="res://tilemaps/grounds and platforms.tscn" id="3_ww0sg"]
-[ext_resource type="PackedScene" uid="uid://2tlnjjmk4no7" path="res://tilemaps/background.tscn" id="4_rj1td"]
+[ext_resource type="PackedScene" path="res://tilemaps/grounds and platforms.tscn" id="3_ww0sg"]
+[ext_resource type="PackedScene" path="res://tilemaps/background.tscn" id="4_rj1td"]
 
 [node name="Level 1" type="Node2D"]
 
