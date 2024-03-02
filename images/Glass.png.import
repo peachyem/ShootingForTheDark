@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://l4b7xpsxdlme"
-path="res://.godot/imported/backgroundColorsTilemap1.png-eea8e1bab6d873b6c1496092fc1cf4af.ctex"
+uid="uid://diyhvx6rvqkb1"
+path="res://.godot/imported/Glass.png-fdf66a106dfd1201bd95801fb16a2031.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://backgroundColorsTilemap1.png"
-dest_files=["res://.godot/imported/backgroundColorsTilemap1.png-eea8e1bab6d873b6c1496092fc1cf4af.ctex"]
+source_file="res://images/Glass.png"
+dest_files=["res://.godot/imported/Glass.png-fdf66a106dfd1201bd95801fb16a2031.ctex"]
 
 [params]
 
