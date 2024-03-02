@@ -19,6 +19,10 @@ config/icon="res://images/icon.svg"
 
 GameManager="*res://scripts/GameManager.gd"
 
+[display]
+
+window/stretch/mode="viewport"
+
 [input]
 
 ui_accept={
@@ -52,3 +56,7 @@ ui_right={
 2d_physics/layer_2="player"
 2d_physics/layer_3="items"
 2d_physics/layer_4="spikes"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0

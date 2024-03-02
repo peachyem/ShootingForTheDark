@@ -6,7 +6,7 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of57y"]
 size = Vector2(14, 37)
 
-[node name="Checkpoint" type="Node2D"]
+[node name="Checkpoint" type="Node2D" groups=["Checkpoints"]]
 script = ExtResource("1_wwfft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
