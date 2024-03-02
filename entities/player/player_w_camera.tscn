@@ -1,17 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://cu7vtwgge2k0j"]
 
-[ext_resource type="Texture2D" uid="uid://bqai71b1t4k2y" path="res://images/icon.svg" id="1_ck0yo"]
+[ext_resource type="Texture2D" uid="uid://ci5pdr2idycm6" path="res://images/Jomb.png" id="1_ew0fa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i4eq"]
-size = Vector2(129, 128)
+size = Vector2(40, 41)
 
 [node name="Player" type="CharacterBody2D"]
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(54.5, 54)
+position = Vector2(20, 43.5)
 shape = SubResource("RectangleShape2D_8i4eq")
 
 [node name="Sprite2D" type="Sprite2D" parent="CollisionShape2D"]
-texture = ExtResource("1_ck0yo")
+position = Vector2(2, -11.5)
+scale = Vector2(2.125, 2)
+texture = ExtResource("1_ew0fa")

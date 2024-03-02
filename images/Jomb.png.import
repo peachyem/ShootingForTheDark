@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://de43nd5ie5e42"
-path="res://.godot/imported/e.png-cba5c4bef244e51234028d094f0858ef.ctex"
+uid="uid://ci5pdr2idycm6"
+path="res://.godot/imported/Jomb.png-be68546a518985289da1b09e46a28f64.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://e.png"
-dest_files=["res://.godot/imported/e.png-cba5c4bef244e51234028d094f0858ef.ctex"]
+source_file="res://images/Jomb.png"
+dest_files=["res://.godot/imported/Jomb.png-be68546a518985289da1b09e46a28f64.ctex"]
 
 [params]
 

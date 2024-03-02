@@ -1,0 +1,14 @@
+[gd_scene load_steps=4 format=3 uid="uid://c7aqf403j0esb"]
+
+[ext_resource type="PackedScene" uid="uid://x35wnbjufn1d" path="res://tilemaps/ground_tilemap.tscn" id="1_frxpb"]
+[ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="2_jusea"]
+[ext_resource type="Script" path="res://scripts/player_control.gd" id="3_ln4g7"]
+
+[node name="Level 1" type="Node2D"]
+
+[node name="TileMap" parent="." instance=ExtResource("1_frxpb")]
+layer_0/tile_data = PackedInt32Array(0, 131072, 0, 1, 131072, 0, 2, 131072, 0, 3, 131072, 0, 4, 131072, 0, 5, 131072, 0, 6, 131072, 0, 7, 131072, 0, 8, 131072, 0, 9, 131072, 0, 10, 131072, 0, 11, 131072, 0, 12, 131072, 0, 13, 131072, 0, 14, 131072, 0, -65522, 131072, 0, 15, 131072, 0, -65521, 131072, 0, -65520, 131072, 0, 16, 131072, 0, 17, 131072, 0, -65519, 131072, 0, -131055, 131072, 0, -131053, 131072, 0, -131054, 131072, 0, -65518, 131072, 0, -65517, 131072, 0, 19, 131072, 0, 18, 131072, 0, 20, 131072, 0, -65516, 131072, 0, -131052, 131072, 0, -131051, 131072, 0, -65515, 131072, 0, 21, 131072, 0, 22, 131072, 0, -65514, 131072, 0, -131050, 131072, 0, -196586, 131072, 0, -196587, 131072, 0, -196588, 131072, 0, -262122, 131072, 0, -262123, 131072, 0, -262124, 131072, 0)
+
+[node name="Player" parent="." instance=ExtResource("2_jusea")]
+position = Vector2(8, -72)
+script = ExtResource("3_ln4g7")
