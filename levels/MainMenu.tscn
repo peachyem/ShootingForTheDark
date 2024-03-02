@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://bdttp6cmvproe"]
+
+[ext_resource type="Script" path="res://scripts/MainMenu.gd" id="1_c61u4"]
+[ext_resource type="FontFile" uid="uid://d1jy3iwvurc1g" path="res://LcdSolid-VPzB.ttf" id="2_5ic64"]
+[ext_resource type="PackedScene" uid="uid://cqu2kmpf0d5oe" path="res://levels/LevelTransition/transition.tscn" id="3_4u4bg"]
+
+[sub_resource type="Theme" id="Theme_wc4x0"]
+default_font = ExtResource("2_5ic64")
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_c61u4")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Play" type="Button" parent="Camera2D"]
+offset_left = -123.0
+offset_top = -124.0
+offset_right = 127.0
+offset_bottom = -74.0
+theme = SubResource("Theme_wc4x0")
+text = "Play"
+
+[node name="Transition" parent="." instance=ExtResource("3_4u4bg")]
+
+[connection signal="pressed" from="Camera2D/Play" to="." method="_on_play_pressed"]
+[connection signal="animation_finished" from="Transition" to="." method="_on_transition_animation_finished"]
