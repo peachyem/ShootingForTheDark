@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dws3oi7kopxtm"]
+[gd_scene load_steps=7 format=3 uid="uid://dws3oi7kopxtm"]
 
 [ext_resource type="PackedScene" uid="uid://2tlnjjmk4no7" path="res://tilemaps/background.tscn" id="1_ryqy6"]
 [ext_resource type="PackedScene" uid="uid://bwchkvxyfnu8l" path="res://tilemaps/grounds and platforms.tscn" id="2_sjvul"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="3_wk5hj"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="4_7wpy0"]
 [ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="5_fvjvl"]
+[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
 
 [node name="Level3" type="Node2D"]
 
@@ -31,3 +32,5 @@ position = Vector2(-1088, -291)
 
 [node name="Rock4" parent="." instance=ExtResource("3_wk5hj")]
 position = Vector2(-1636, -65)
+
+[node name="Ambient Cave Music" parent="." instance=ExtResource("6_iqxal")]
