@@ -3,9 +3,10 @@
 [ext_resource type="Texture2D" uid="uid://ci5pdr2idycm6" path="res://images/Jomb.png" id="1_ew0fa"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i4eq"]
-size = Vector2(40, 41)
+size = Vector2(129, 128)
 
 [node name="Player" type="CharacterBody2D"]
+collision_layer = 3
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
