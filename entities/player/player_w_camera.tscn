@@ -10,15 +10,17 @@ size = Vector2(20, 32)
 size = Vector2(38, 43)
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
-collision_mask = 7
+collision_layer = 2
+collision_mask = 29
 script = ExtResource("1_2ut6p")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="PlayerHitArea2D" type="Area2D" parent="."]
 position = Vector2(-2, 2)
+collision_layer = 2
+collision_mask = 29
 monitoring = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+[node name="PlayerHitCollisionShape2D" type="CollisionShape2D" parent="PlayerHitArea2D"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_uds6f")
 
