@@ -43,9 +43,7 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	
-	if position.y >= 600:
-		die()
+
 	
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)

@@ -1,10 +1,10 @@
-[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://bnx26cdi30d1x"]
+[gd_resource type="TileSet" load_steps=11 format=3 uid="uid://c3n45wy3bnfh"]
 
 [ext_resource type="Texture2D" uid="uid://0tdoyu045cum" path="res://images/projectile.png" id="1_eve2m"]
-[ext_resource type="Texture2D" path="res://images/platform1.png" id="2_550du"]
-[ext_resource type="Texture2D" path="res://images/RockBackground.png" id="3_xbqc5"]
-[ext_resource type="Texture2D" path="res://images/RockBackground1.png" id="4_jaqhk"]
-[ext_resource type="Texture2D" path="res://images/GrayBack.png" id="5_nt5aj"]
+[ext_resource type="Texture2D" uid="uid://drmxfij2ad54c" path="res://images/platform1.png" id="2_550du"]
+[ext_resource type="Texture2D" uid="uid://dom24qijuptnh" path="res://images/RockBackground.png" id="3_xbqc5"]
+[ext_resource type="Texture2D" uid="uid://cgshchnjtsbp6" path="res://images/RockBackground1.png" id="4_jaqhk"]
+[ext_resource type="Texture2D" uid="uid://vn1xi1uwdjg4" path="res://images/GrayBack.png" id="5_nt5aj"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_25eru"]
 texture = ExtResource("1_eve2m")
