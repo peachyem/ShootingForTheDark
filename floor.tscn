@@ -1,7 +1,7 @@
-[gd_scene load_steps=4 format=3 uid="uid://dd4wkbmo5sm80"]
+[gd_scene load_steps=4 format=3 uid="uid://c5ngmeihkn4oh"]
 
-[ext_resource type="TileSet" uid="uid://dldhaio6fd8hr" path="res://new_tile_set.tres" id="1_u8mkk"]
-[ext_resource type="PackedScene" uid="uid://bj0o0nwogvwab" path="res://player.tscn" id="2_4jc2c"]
+[ext_resource type="TileSet" uid="uid://ddbiuacnrr2wy" path="res://new_tile_set.tres" id="1_u8mkk"]
+[ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://player.tscn" id="2_4jc2c"]
 [ext_resource type="Script" path="res://player.gd" id="3_pjeeu"]
 
 [node name="Floor" type="Node2D"]
