@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://doyipuo6ws5c7"]
+[gd_scene load_steps=6 format=3 uid="uid://doyipuo6ws5c7"]
 
 [ext_resource type="PackedScene" uid="uid://2tlnjjmk4no7" path="res://tilemaps/background.tscn" id="1_txyf3"]
 [ext_resource type="PackedScene" uid="uid://bwchkvxyfnu8l" path="res://tilemaps/grounds and platforms.tscn" id="2_rj8rv"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_tft3r"]
 [ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="4_67xs2"]
 [ext_resource type="PackedScene" path="res://entities/interactables/spikes.tscn" id="5_rv3gd"]
-[ext_resource type="PackedScene" uid="uid://ddh0i6mt878tx" path="res://entities/enemies/enemy.tscn" id="6_1be7o"]
 
 [node name="Level4" type="Node2D"]
 
@@ -69,6 +68,3 @@ position = Vector2(-784, 144)
 
 [node name="Node2D17" parent="." instance=ExtResource("5_rv3gd")]
 position = Vector2(-816, 144)
-
-[node name="Enemy" parent="." instance=ExtResource("6_1be7o")]
-position = Vector2(-624, -273)
