@@ -1,4 +1,6 @@
 extends CharacterBody2D
+class_name Player
+
 
 const SPEED = 300.0
 const JUMP_VELOCITY = -400.0
@@ -10,6 +12,8 @@ var was_in_air : bool = false
 var has_double_jumped : bool = false
 var push_force = 80.00
 
+func _ready():
+	GameManager.player = self
 
 func _physics_process(delta):
 	# Add the gravity.
@@ -40,8 +44,14 @@ func _physics_process(delta):
 
 	move_and_slide()
 	
+	if position.y >= 600:
+		die()
+	
 	for i in get_slide_collision_count():
 		var c = get_slide_collision(i)
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 			
+
+func die():
+	GameManager.respawn_player()

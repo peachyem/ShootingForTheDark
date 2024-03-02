@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://de6u7wjm56fn5"]
+
+[ext_resource type="Texture2D" uid="uid://c1hhtli7ltjj1" path="res://images/Spikes2.png" id="1_rbmps"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0f3tp"]
+size = Vector2(32, 19)
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rbmps")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_0f3tp")
