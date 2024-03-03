@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=3 uid="uid://ctx2l814q0fvm"]
+[gd_scene load_steps=12 format=3 uid="uid://ctx2l814q0fvm"]
 
 [ext_resource type="Script" path="res://levels/level_2.gd" id="1_ouqg4"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_k2uem"]
@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="7_pdn2j"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="8_dfisr"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="9_0tr80"]
+[ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="10_4fhkn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8md1o"]
 resource_local_to_scene = true
@@ -119,5 +120,9 @@ position = Vector2(-815, 2143)
 [node name="CollisionShape2D" parent="LevelExit" index="0"]
 position = Vector2(-13.875, 16.5)
 shape = SubResource("RectangleShape2D_8md1o")
+
+[node name="Finish" type="Sprite2D" parent="."]
+position = Vector2(-829, 2191)
+texture = ExtResource("10_4fhkn")
 
 [editable path="LevelExit"]

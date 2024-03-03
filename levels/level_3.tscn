@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dws3oi7kopxtm"]
+[gd_scene load_steps=11 format=3 uid="uid://dws3oi7kopxtm"]
 
 [ext_resource type="Script" path="res://levels/level_3.gd" id="1_myfvt"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="3_wk5hj"]
@@ -8,10 +8,11 @@
 [ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="7_h1u8o"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="8_cxxv8"]
+[ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="9_f1pyu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_466x4"]
 resource_local_to_scene = true
-size = Vector2(45.75, 64)
+size = Vector2(62.75, 64)
 
 [node name="Level3" type="Node2D"]
 script = ExtResource("1_myfvt")
@@ -47,7 +48,11 @@ layer_0/tile_data = PackedInt32Array(-65530, 0, 9, 6, 0, 11, 65542, 0, 13, 13107
 position = Vector2(-1840, -24)
 
 [node name="CollisionShape2D" parent="LevelExit" index="0"]
-position = Vector2(-23.875, -10)
+position = Vector2(-15.375, -10)
 shape = SubResource("RectangleShape2D_466x4")
+
+[node name="Finish" type="Sprite2D" parent="."]
+position = Vector2(-1854, -17)
+texture = ExtResource("9_f1pyu")
 
 [editable path="LevelExit"]
