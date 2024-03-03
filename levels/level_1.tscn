@@ -1,11 +1,13 @@
-[gd_scene load_steps=5 format=3 uid="uid://b3rthjb2ebsk7"]
+[gd_scene load_steps=6 format=3 uid="uid://b3rthjb2ebsk7"]
 
+[ext_resource type="Script" path="res://levels/level_1.gd" id="1_w6i3q"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="2_jusea"]
-[ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="4_6khoq"]
+[ext_resource type="PackedScene" path="res://tilemaps/ground_tiles.tscn" id="4_6khoq"]
 [ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="4_wuiln"]
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="5_pibca"]
+[ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="5_pibca"]
 
 [node name="Level 1" type="Node2D"]
+script = ExtResource("1_w6i3q")
 
 [node name="Player" parent="." instance=ExtResource("2_jusea")]
 position = Vector2(76, -152)

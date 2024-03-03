@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://cfkfvup4ghku"]
+[gd_scene load_steps=7 format=3 uid="uid://o3dhfbp7ymry"]
 
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="1_pph3l"]
+[ext_resource type="Script" path="res://levels/level_8.gd" id="1_2xy8j"]
+[ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="1_pph3l"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_ab7rq"]
-[ext_resource type="PackedScene" uid="uid://c032jwdbplrvs" path="res://entities/interactables/spikes.tscn" id="4_tsl6w"]
-[ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="5_gcnci"]
+[ext_resource type="PackedScene" uid="uid://de6u7wjm56fn5" path="res://entities/interactables/spikes.tscn" id="4_tsl6w"]
+[ext_resource type="PackedScene" path="res://tilemaps/ground_tiles.tscn" id="5_gcnci"]
 [ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="5_kch4e"]
 
 [node name="Level8" type="Node2D"]
+script = ExtResource("1_2xy8j")
 
 [node name="Ambient Cave Music" parent="." instance=ExtResource("1_pph3l")]
 

@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=3 uid="uid://dws3oi7kopxtm"]
+[gd_scene load_steps=7 format=3 uid="uid://dws3oi7kopxtm"]
 
+[ext_resource type="Script" path="res://levels/level_3.gd" id="1_myfvt"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="3_wk5hj"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="4_7wpy0"]
-[ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="5_313gf"]
+[ext_resource type="PackedScene" path="res://tilemaps/ground_tiles.tscn" id="5_313gf"]
 [ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="5_fvjvl"]
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
+[ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
 
 [node name="Level3" type="Node2D"]
+script = ExtResource("1_myfvt")
 
 [node name="Rock" parent="." instance=ExtResource("3_wk5hj")]
 position = Vector2(45, 7)
