@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://b4x8io243mjs0"]
+
+[ext_resource type="TileSet" uid="uid://do6jegi3j8kgi" path="res://tilemaps/arrow.tres" id="1_r24ro"]
+
+[node name="Arrows" type="TileMap"]
+tile_set = ExtResource("1_r24ro")
+format = 2
