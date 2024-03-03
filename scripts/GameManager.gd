@@ -19,30 +19,33 @@ var player : Player
 
 func respawn_player():
 	if current_checkpoint != null:
+		print("respawning player...")
 		player.position = current_checkpoint.global_position
+	else:
+		print("current checkpoint is null")
 
 func load_scene(sceneName: String):
 	var newScene = preloadedScenes[sceneName]
-	
+
 	if (newScene == null):
 		newScene = preloadedScenes["MainMenu"]
-	
+
 	get_tree().change_scene_to_packed(newScene)
-	
+
 	while (get_tree().current_scene == null):
 		await get_tree().process_frame
 
 	get_tree().current_scene.connect("level_complete", _on_level_complete.bind(sceneName))
-	
+
 func get_next_scene(curSceneName: String) -> String:
 	print("getting", curSceneName)
 	var where:= sceneList.find(curSceneName)
 	print(where)
 	if (where == -1 || where == sceneList.size() - 1):
 		return "MainMenu"
-	
+
 	print(sceneList[where + 1])
-	
+
 	return sceneList[where + 1]
 
 func _on_level_complete(levelName : String) -> void:
