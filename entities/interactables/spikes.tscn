@@ -4,21 +4,21 @@
 [ext_resource type="Script" path="res://entities/interactables/spikes.gd" id="1_vyk0o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0f3tp"]
-size = Vector2(32, 19)
+size = Vector2(30, 16)
 
-[node name="Spikes" type="Node2D"]
+[node name="Spikes" type="Node2D" groups=["Spike"]]
 script = ExtResource("1_vyk0o")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_rbmps")
 
-[node name="Area2D" type="Area2D" parent="."]
+[node name="SpikeHitboxArea2D" type="Area2D" parent="."]
 collision_layer = 8
-collision_mask = 19
+collision_mask = 2
 monitorable = false
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(0, 6.5)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="SpikeHitboxArea2D"]
+position = Vector2(0, 8)
 shape = SubResource("RectangleShape2D_0f3tp")
 
-[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
+[connection signal="area_entered" from="SpikeHitboxArea2D" to="." method="_on_area_2d_area_entered"]

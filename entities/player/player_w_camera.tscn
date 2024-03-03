@@ -9,18 +9,18 @@ size = Vector2(20, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i4eq"]
 size = Vector2(38, 43)
 
-[node name="Player" type="CharacterBody2D"]
+[node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_2ut6p")
 
-[node name="PlayerHitArea2D" type="Area2D" parent="."]
+[node name="PlayerPhysicsArea2D" type="Area2D" parent="."]
 position = Vector2(-2, 2)
 collision_layer = 2
 collision_mask = 29
 monitoring = false
 
-[node name="PlayerHitCollisionShape2D" type="CollisionShape2D" parent="PlayerHitArea2D"]
+[node name="PlayerPhysicsCollisionShape2D" type="CollisionShape2D" parent="PlayerPhysicsArea2D"]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_uds6f")
 
@@ -32,6 +32,6 @@ position = Vector2(0, -11)
 scale = Vector2(2.125, 2)
 texture = ExtResource("1_ew0fa")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+[node name="PlayerRangeCollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_8i4eq")
