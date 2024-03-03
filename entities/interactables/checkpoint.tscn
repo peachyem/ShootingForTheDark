@@ -1,17 +1,54 @@
-[gd_scene load_steps=4 format=3 uid="uid://dgfqsf53jlld5"]
+[gd_scene load_steps=7 format=3 uid="uid://dgfqsf53jlld5"]
 
-[ext_resource type="Texture2D" uid="uid://dtx7psl8tjwc6" path="res://images/flag.png" id="1_wggrx"]
 [ext_resource type="Script" path="res://entities/interactables/Checkpoint.gd" id="1_wwfft"]
+[ext_resource type="Texture2D" uid="uid://bwjfeb5a73hvf" path="res://images/newFlag1.png" id="2_c06va"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_of57y"]
 size = Vector2(14, 37)
+
+[sub_resource type="Animation" id="Animation_eivhe"]
+resource_name = "activate"
+length = 0.8
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 1,
+"values": [0, 1, 2, 3]
+}
+
+[sub_resource type="Animation" id="Animation_8niq7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_anfeq"]
+_data = {
+"RESET": SubResource("Animation_8niq7"),
+"activate": SubResource("Animation_eivhe")
+}
 
 [node name="Checkpoint" type="Node2D" groups=["Checkpoints"]]
 script = ExtResource("1_wwfft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(7, 0)
-texture = ExtResource("1_wggrx")
+texture = ExtResource("2_c06va")
 hframes = 4
 
 [node name="Area2D" type="Area2D" parent="."]
@@ -21,5 +58,10 @@ monitorable = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
 position = Vector2(0, -1.5)
 shape = SubResource("RectangleShape2D_of57y")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_anfeq")
+}
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
