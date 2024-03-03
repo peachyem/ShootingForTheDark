@@ -1,7 +1,6 @@
-[gd_scene load_steps=12 format=3 uid="uid://624pp77bh6ie"]
+[gd_scene load_steps=10 format=3 uid="uid://624pp77bh6ie"]
 
 [ext_resource type="Script" path="res://levels/level_0.gd" id="1_oecyg"]
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="1_p0dt1"]
 [ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="2_jk7do"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="5_ghv6y"]
 [ext_resource type="PackedScene" uid="uid://c032jwdbplrvs" path="res://entities/interactables/spikes.tscn" id="6_568uq"]
@@ -9,16 +8,13 @@
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="7_l7iuy"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="8_wv44m"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="9_0j4yu"]
-[ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="10_bie74"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxsih"]
 resource_local_to_scene = true
-size = Vector2(59, 63)
+size = Vector2(31.5, 64)
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_oecyg")
-
-[node name="Ambient Cave Music" parent="." instance=ExtResource("1_p0dt1")]
 
 [node name="Checkpoint" parent="." instance=ExtResource("2_jk7do")]
 position = Vector2(382, 46)
@@ -91,11 +87,7 @@ layer_0/tile_data = PackedInt32Array(-3, 0, 9, 65533, 0, 11, 131069, 0, 13, 1966
 position = Vector2(3286, 10)
 
 [node name="CollisionShape2D" parent="LevelExit" index="0"]
-position = Vector2(11.5, 22.5)
+position = Vector2(26, 22)
 shape = SubResource("RectangleShape2D_gxsih")
-
-[node name="Finish" type="Sprite2D" parent="."]
-position = Vector2(3297, 48)
-texture = ExtResource("10_bie74")
 
 [editable path="LevelExit"]

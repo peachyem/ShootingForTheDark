@@ -10,7 +10,9 @@ size = Vector2(14, 37)
 script = ExtResource("1_wwfft")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(7, 0)
 texture = ExtResource("1_wggrx")
+hframes = 4
 
 [node name="Area2D" type="Area2D" parent="."]
 collision_mask = 2
