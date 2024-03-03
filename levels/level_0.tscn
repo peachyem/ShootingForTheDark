@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://624pp77bh6ie"]
+[gd_scene load_steps=14 format=3 uid="uid://624pp77bh6ie"]
 
 [ext_resource type="Script" path="res://levels/level_0.gd" id="1_oecyg"]
 [ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="2_jk7do"]
@@ -10,10 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="9_0j4yu"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="9_nexsk"]
 [ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="10_f7xdh"]
+[ext_resource type="PackedScene" uid="uid://crpyrq2vci45q" path="res://entities/enemies/bat_enemy.tscn" id="11_tmafs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gxsih"]
 resource_local_to_scene = true
 size = Vector2(64.75, 64)
+
+[sub_resource type="Curve2D" id="Curve2D_nv7sb"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -23, 0, 0, 0, 0, 0, 379, 0, 0, 0, 0, 0, -23, 0)
+}
+point_count = 3
 
 [node name="Level0" type="Node2D"]
 script = ExtResource("1_oecyg")
@@ -99,4 +107,20 @@ texture = ExtResource("9_nexsk")
 [node name="Arrows" parent="." instance=ExtResource("10_f7xdh")]
 layer_0/tile_data = PackedInt32Array(-458750, 0, 0, -393214, 0, 1, -458749, 65536, 0, -393213, 65536, 1, -458746, 0, 0, -393210, 0, 1, -458745, 65536, 0, -393209, 65536, 1, 89, 0, 2, 65625, 0, 3, 90, 65536, 2, 65626, 65536, 3, -262000, 0, 0, -196464, 0, 1, -261999, 65536, 0, -196463, 65536, 1, -261997, 0, 0, -196461, 0, 1, -261996, 65536, 0, -196460, 65536, 1)
 
+[node name="BatEnemy" parent="." instance=ExtResource("11_tmafs")]
+position = Vector2(2438, 16)
+
+[node name="Path2D" parent="BatEnemy" index="0"]
+curve = SubResource("Curve2D_nv7sb")
+
+[node name="TextEdit" type="TextEdit" parent="."]
+offset_left = 2409.0
+offset_top = -93.0
+offset_right = 2777.0
+offset_bottom = -3.0
+text = "Bat:
+Flying enemy, kills the player. But look at how
+cute it is flying upside down"
+
 [editable path="LevelExit"]
+[editable path="BatEnemy"]
