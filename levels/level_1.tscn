@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://b3rthjb2ebsk7"]
+[gd_scene load_steps=12 format=3 uid="uid://b3rthjb2ebsk7"]
 
 [ext_resource type="Script" path="res://levels/level_1.gd" id="1_w6i3q"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="2_jusea"]
@@ -8,10 +8,18 @@
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="7_t04cm"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="7_w71jb"]
 [ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="8_8agsj"]
+[ext_resource type="PackedScene" uid="uid://crpyrq2vci45q" path="res://entities/enemies/bat_enemy.tscn" id="9_0vp5c"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ip1gd"]
 resource_local_to_scene = true
 size = Vector2(95, 64)
+
+[sub_resource type="Curve2D" id="Curve2D_w80ul"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -23, 0, 0, 0, 0, 0, 1161, 1, 0, 0, 0, 0, -23, 0)
+}
+point_count = 3
 
 [node name="Level 1" type="Node2D"]
 script = ExtResource("1_w6i3q")
@@ -43,4 +51,14 @@ texture = ExtResource("7_w71jb")
 [node name="Arrows" parent="." instance=ExtResource("8_8agsj")]
 layer_0/tile_data = PackedInt32Array(-458751, 0, 0, -393215, 0, 1, -458750, 65536, 0, -393214, 65536, 1, -458745, 0, 0, -393209, 0, 1, -458744, 65536, 0, -393208, 65536, 1, -196482, 131072, 0, -130946, 131072, 1, -196481, 196608, 0, -130945, 196608, 1, 131198, 131072, 0, 196734, 131072, 1, 131199, 196608, 0, 196735, 196608, 1, 458878, 131072, 0, 524414, 131072, 1, 458879, 196608, 0, 524415, 196608, 1)
 
+[node name="BatEnemy" parent="." instance=ExtResource("9_0vp5c")]
+position = Vector2(588, 109)
+
+[node name="Path2D" parent="BatEnemy" index="0"]
+curve = SubResource("Curve2D_w80ul")
+
+[node name="PathFollow2D" parent="BatEnemy/Path2D" index="0"]
+rotation = 0.000844594
+
 [editable path="LevelExit"]
+[editable path="BatEnemy"]
