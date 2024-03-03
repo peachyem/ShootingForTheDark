@@ -64,5 +64,6 @@ func die():
 
 func _on_hurt(sender: Node):
 	if (sender.is_in_group("Spike")):
-		print("Spike!")
+		die()
+	elif (sender.is_in_group("Bat")):
 		die()

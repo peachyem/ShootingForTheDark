@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="4_67xs2"]
 [ext_resource type="PackedScene" uid="uid://c032jwdbplrvs" path="res://entities/interactables/spikes.tscn" id="5_rv3gd"]
 [ext_resource type="PackedScene" uid="uid://ddh0i6mt878tx" path="res://entities/enemies/enemy.tscn" id="6_1be7o"]
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="6_khpgw"]
+[ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="6_khpgw"]
 [ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="7_sjasv"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="8_7m4es"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="9_hm6ky"]

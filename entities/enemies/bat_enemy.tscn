@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=3 uid="uid://crpyrq2vci45q"]
+
+[ext_resource type="Script" path="res://entities/enemies/bat_enemy.gd" id="1_1vn8v"]
+[ext_resource type="Texture2D" uid="uid://dlhpi7hdhllt3" path="res://images/Bat.png" id="1_d65ih"]
+
+[sub_resource type="Curve2D" id="Curve2D_7mwwf"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -23, 0, 0, 0, 0, 0, 21, 0)
+}
+point_count = 2
+
+[sub_resource type="Animation" id="Animation_j4sf6"]
+resource_name = "flap"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [0, 1]
+}
+
+[sub_resource type="Animation" id="Animation_w0gng"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Path2D/PathFollow2D/Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_7yney"]
+_data = {
+"RESET": SubResource("Animation_w0gng"),
+"flap": SubResource("Animation_j4sf6")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_8h4fy"]
+
+[node name="BatEnemy" type="Node2D" groups=["Bat", "Enemy"]]
+script = ExtResource("1_1vn8v")
+moveSpeed = 40
+
+[node name="Path2D" type="Path2D" parent="."]
+curve = SubResource("Curve2D_7mwwf")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Path2D"]
+position = Vector2(-23, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Path2D/PathFollow2D"]
+position = Vector2(2, -5)
+texture = ExtResource("1_d65ih")
+hframes = 2
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Path2D/PathFollow2D"]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_7yney")
+}
+
+[node name="HurtArea2D" type="Area2D" parent="Path2D/PathFollow2D"]
+collision_layer = 16
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Path2D/PathFollow2D/HurtArea2D"]
+shape = SubResource("CircleShape2D_8h4fy")
+
+[connection signal="area_entered" from="Path2D/PathFollow2D/HurtArea2D" to="." method="_on_hurt_area_2d_area_entered"]

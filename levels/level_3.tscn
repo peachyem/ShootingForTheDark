@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="4_7wpy0"]
 [ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="5_313gf"]
 [ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="5_fvjvl"]
-[ext_resource type="PackedScene" uid="uid://00w6ouqc6jtp" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
+[ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="6_iqxal"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="7_h1u8o"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="8_cxxv8"]
 
