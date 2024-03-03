@@ -50,6 +50,10 @@ func _physics_process(delta):
 		if c.get_collider() is RigidBody2D:
 			c.get_collider().apply_central_impulse(-c.get_normal() * push_force)
 
-
 func die():
 	GameManager.respawn_player()
+
+func _on_hurt(sender: Node):
+	if (sender.is_in_group("Spike")):
+		print("Spike!")
+		die()

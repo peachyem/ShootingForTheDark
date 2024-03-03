@@ -2,10 +2,10 @@
 
 [ext_resource type="Script" path="res://levels/level_0.gd" id="1_oecyg"]
 [ext_resource type="PackedScene" path="res://music/ambient_cave_music.tscn" id="1_p0dt1"]
-[ext_resource type="PackedScene" path="res://entities/interactables/checkpoint.tscn" id="2_jk7do"]
+[ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="2_jk7do"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="5_ghv6y"]
-[ext_resource type="PackedScene" uid="uid://de6u7wjm56fn5" path="res://entities/interactables/spikes.tscn" id="6_568uq"]
-[ext_resource type="PackedScene" path="res://tilemaps/ground_tiles.tscn" id="6_qs8rs"]
+[ext_resource type="PackedScene" uid="uid://c032jwdbplrvs" path="res://entities/interactables/spikes.tscn" id="6_568uq"]
+[ext_resource type="PackedScene" uid="uid://cmjr7yqte77f0" path="res://tilemaps/ground_tiles.tscn" id="6_qs8rs"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="7_l7iuy"]
 
 [node name="Level0" type="Node2D"]
