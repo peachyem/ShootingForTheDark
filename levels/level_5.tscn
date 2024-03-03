@@ -8,7 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dgfqsf53jlld5" path="res://entities/interactables/checkpoint.tscn" id="7_3pbfj"]
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="8_sws4b"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="9_b1ifk"]
-[ext_resource type="PackedScene" path="res://entities/enemies/bat_enemy.tscn" id="10_8kiu2"]
+[ext_resource type="PackedScene" uid="uid://crpyrq2vci45q" path="res://entities/enemies/bat_enemy.tscn" id="10_8kiu2"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="10_c2tkq"]
 [ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="11_4avy3"]
 

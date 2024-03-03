@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://ctx2l814q0fvm"]
+[gd_scene load_steps=14 format=3 uid="uid://ctx2l814q0fvm"]
 
 [ext_resource type="Script" path="res://levels/level_2.gd" id="1_ouqg4"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_k2uem"]
@@ -10,10 +10,18 @@
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="9_0tr80"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="9_2nfdj"]
 [ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="10_rqk1g"]
+[ext_resource type="PackedScene" uid="uid://crpyrq2vci45q" path="res://entities/enemies/bat_enemy.tscn" id="11_lkf64"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8md1o"]
 resource_local_to_scene = true
 size = Vector2(67.75, 95)
+
+[sub_resource type="Curve2D" id="Curve2D_2l7qu"]
+resource_local_to_scene = true
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -23, 0, 0, 0, 0, 0, 648, -1, 0, 0, 0, 0, -23, 0)
+}
+point_count = 3
 
 [node name="Level2" type="Node2D"]
 script = ExtResource("1_ouqg4")
@@ -126,4 +134,14 @@ texture = ExtResource("9_2nfdj")
 [node name="Arrows" parent="." instance=ExtResource("10_rqk1g")]
 layer_0/tile_data = PackedInt32Array(589824, 131072, 0, 655360, 131072, 1, 589825, 196608, 0, 655361, 196608, 1, 851968, 131072, 0, 917504, 131072, 1, 851969, 196608, 0, 917505, 196608, 1, 7405590, 0, 0, 7471126, 0, 1, 7405591, 65536, 0, 7471127, 65536, 1, 9437163, 131072, 2, 9502699, 131072, 3, 9437164, 196608, 2, 9502700, 196608, 3, 8847329, 131072, 2, 8912865, 131072, 3, 8847330, 196608, 2, 8912866, 196608, 3)
 
+[node name="BatEnemy" parent="." instance=ExtResource("11_lkf64")]
+position = Vector2(-334, 1841)
+
+[node name="Path2D" parent="BatEnemy" index="0"]
+curve = SubResource("Curve2D_2l7qu")
+
+[node name="PathFollow2D" parent="BatEnemy/Path2D" index="0"]
+rotation = -0.00149031
+
 [editable path="LevelExit"]
+[editable path="BatEnemy"]
