@@ -23,7 +23,10 @@ func _physics_process(delta):
 	else:
 		has_double_jumped = false
 
-
+func _process(delta: float) -> void:
+	if (Input.is_action_just_pressed("reset")):
+		die()
+	pass
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_up"):
