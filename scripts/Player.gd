@@ -26,7 +26,7 @@ func _physics_process(delta):
 
 
 	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept"):
+	if Input.is_action_just_pressed("ui_accept") || Input.is_action_just_pressed("ui_up"):
 		if is_on_floor():
 			velocity.y = JUMP_VELOCITY
 		elif not has_double_jumped:
@@ -41,6 +41,15 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+
+	if velocity.x > 0:
+		$Sprite2D.flip_h = true
+		$AnimationPlayer.play("Walk")
+	elif velocity.x < 0:
+		$Sprite2D.flip_h = false
+		$AnimationPlayer.play("Walk")
+	else:
+		$AnimationPlayer.play("RESET")
 
 	move_and_slide()
 

@@ -1,37 +1,84 @@
-[gd_scene load_steps=5 format=3 uid="uid://cu7vtwgge2k0j"]
+[gd_scene load_steps=8 format=3 uid="uid://cu7vtwgge2k0j"]
 
 [ext_resource type="Script" path="res://scripts/Player.gd" id="1_2ut6p"]
-[ext_resource type="Texture2D" uid="uid://ci5pdr2idycm6" path="res://images/Jomb.png" id="1_ew0fa"]
+[ext_resource type="Texture2D" uid="uid://bwms3wxwdasy0" path="res://images/playerChar.png" id="2_2t3c1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_uds6f"]
-size = Vector2(20, 32)
+size = Vector2(38, 59)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8i4eq"]
-size = Vector2(38, 43)
+size = Vector2(15, 49)
+
+[sub_resource type="Animation" id="Animation_0fdgq"]
+resource_name = "Walk"
+length = 0.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.25),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [3, 0]
+}
+
+[sub_resource type="Animation" id="Animation_cb7db"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [3]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_p170s"]
+_data = {
+"RESET": SubResource("Animation_cb7db"),
+"Walk": SubResource("Animation_0fdgq")
+}
 
 [node name="Player" type="CharacterBody2D" groups=["Player"]]
 collision_layer = 2
 collision_mask = 29
 script = ExtResource("1_2ut6p")
 
-[node name="PlayerPhysicsArea2D" type="Area2D" parent="."]
-position = Vector2(-2, 2)
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0, -11)
+scale = Vector2(2.125, 2)
+texture = ExtResource("2_2t3c1")
+flip_h = true
+hframes = 2
+vframes = 2
+frame = 3
+
+[node name="PlayerRangeArea2D" type="Area2D" parent="."]
+position = Vector2(-2, 6)
 collision_layer = 2
 collision_mask = 29
 monitoring = false
 
-[node name="PlayerPhysicsCollisionShape2D" type="CollisionShape2D" parent="PlayerPhysicsArea2D"]
-position = Vector2(0, -1)
+[node name="PlayerRangeCollisionShape2D" type="CollisionShape2D" parent="PlayerRangeArea2D"]
+position = Vector2(1, -15.5)
 shape = SubResource("RectangleShape2D_uds6f")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(-2, 2)
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(0, -11)
-scale = Vector2(2.125, 2)
-texture = ExtResource("1_ew0fa")
-
-[node name="PlayerRangeCollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-1, 1)
+[node name="PlayerPhysicsCollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -6.5)
 shape = SubResource("RectangleShape2D_8i4eq")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_p170s")
+}
