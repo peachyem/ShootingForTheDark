@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=3 uid="uid://dws3oi7kopxtm"]
+[gd_scene load_steps=11 format=3 uid="uid://dws3oi7kopxtm"]
 
 [ext_resource type="Script" path="res://levels/level_3.gd" id="1_myfvt"]
 [ext_resource type="PackedScene" uid="uid://cdeiryqewf57p" path="res://entities/interactables/rock.tscn" id="3_wk5hj"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="7_h1u8o"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="8_cxxv8"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="8_dj2ag"]
+[ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="9_0nore"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_466x4"]
 resource_local_to_scene = true
@@ -17,7 +18,7 @@ size = Vector2(63.75, 64)
 script = ExtResource("1_myfvt")
 
 [node name="Rock" parent="." instance=ExtResource("3_wk5hj")]
-position = Vector2(45, 7)
+position = Vector2(70, 7)
 
 [node name="Player" parent="." instance=ExtResource("4_7wpy0")]
 position = Vector2(1, 14)
@@ -51,5 +52,8 @@ shape = SubResource("RectangleShape2D_466x4")
 [node name="Finish" type="Sprite2D" parent="."]
 position = Vector2(-1854, -16)
 texture = ExtResource("8_dj2ag")
+
+[node name="Arrows" parent="." instance=ExtResource("9_0nore")]
+layer_0/tile_data = PackedInt32Array(131074, 0, 0, 196610, 0, 1, 131075, 65536, 0, 196611, 65536, 1, 196593, 131072, 2, 262129, 131072, 3, 196594, 196608, 2, 262130, 196608, 3, -131159, 131072, 2, -65623, 131072, 3, -131158, 196608, 2, -65622, 196608, 3)
 
 [editable path="LevelExit"]

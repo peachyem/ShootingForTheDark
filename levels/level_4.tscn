@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://doyipuo6ws5c7"]
+[gd_scene load_steps=13 format=3 uid="uid://doyipuo6ws5c7"]
 
 [ext_resource type="Script" path="res://levels/level_4.gd" id="1_qfs6f"]
 [ext_resource type="PackedScene" uid="uid://cu7vtwgge2k0j" path="res://entities/player/player_w_camera.tscn" id="3_tft3r"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://cysyl0lx6wvou" path="res://tilemaps/background.tscn" id="9_hm6ky"]
 [ext_resource type="Texture2D" uid="uid://6mc4cutb0ss8" path="res://images/finish.png" id="10_i8i75"]
 [ext_resource type="PackedScene" uid="uid://tyodc5uno8vv" path="res://levels/level_exit.tscn" id="10_od71m"]
+[ext_resource type="PackedScene" uid="uid://b4x8io243mjs0" path="res://tilemaps/Arrows.tscn" id="11_1a2d3"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4l6w6"]
 resource_local_to_scene = true
@@ -150,5 +151,8 @@ layer_0/tile_data = PackedInt32Array(-65540, 0, 9, 131068, 0, 15, 131069, 131072
 [node name="Finish" type="Sprite2D" parent="."]
 position = Vector2(-2418, 911)
 texture = ExtResource("10_i8i75")
+
+[node name="Arrows" parent="." instance=ExtResource("11_1a2d3")]
+layer_0/tile_data = PackedInt32Array(-16, 131072, 2, 65520, 131072, 3, -15, 196608, 2, 65521, 196608, 3, -76, 131072, 2, 65460, 131072, 3, -75, 196608, 2, 65461, 196608, 3, -115, 131072, 2, 65421, 131072, 3, -114, 196608, 2, 65422, 196608, 3, -327795, 131072, 2, -262259, 131072, 3, -327794, 196608, 2, -262258, 196608, 3, -786547, 131072, 2, -721011, 131072, 3, -786546, 196608, 2, -721010, 196608, 3, -131224, 131072, 0, -65688, 131072, 1, -131223, 196608, 0, -65687, 196608, 1, 196456, 131072, 0, 261992, 131072, 1, 196457, 196608, 0, 261993, 196608, 1)
 
 [editable path="LevelExit"]
